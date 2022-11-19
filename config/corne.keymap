@@ -35,12 +35,12 @@
 // | ` 5  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |Delete|
 // |      |     |     |     |     |     |   |     |     |     |     |  [  |  ]   |
 // |SHIFT |     |     |     |     |     |   |     |     | -   | =   |  \  |      |
-//                    |     |     |     |   |     |     |     |
+//                    |     |RESET|BOOT |   |     |     |     |
                         bindings = <
-   &lt 4 GRAVE  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8     &kp N9    &kp N0     &kp DEL
-   &mo 3        &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans     &trans    &kp LBKT   &kp RBKT
-   &kp LSHFT    &trans       &trans       &trans       &trans       &trans         &trans   &trans   &kp MINUS  &kp EQUAL &kp BSLH   &trans
-                          	               &trans       &trans       &trans         &trans   &trans   &trans
+   &lt 4 GRAVE  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5              &kp N6   &kp N7   &kp N8     &kp N9    &kp N0     &kp DEL
+   &mo 3        &trans       &trans       &trans       &trans       &trans              &trans   &trans   &trans     &trans    &kp LBKT   &kp RBKT
+   &kp LSHFT    &trans       &trans       &trans       &reset       &bootloader         &trans   &trans   &kp MINUS  &kp EQUAL &kp BSLH   &trans
+                          	               &trans       &trans       &trans              &trans   &trans   &trans
                         >;
                 };
                 THREE_layer {
@@ -48,12 +48,12 @@
 // |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 |Delete|
 // |      |     |     |     |     |     |   |     |     |     |     | UP  |      |
 // |      |     |     |     |     |     |   |     |     |     |LEFT |DOWN |RIGHT |
-//                    |     |     |     |   |     |     |     |
+//                    |     |     |     |   |BOOT |RESET|     |
                         bindings = <
-   &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5      &kp F6  &kp F7  &kp F8  &kp F9    &kp F10   &kp DEL
-   &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &kp UP    &trans
-   &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT
-                           &trans  &trans  &trans      &trans  &trans  &trans
+   &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5      &kp F6       &kp F7  &kp F8  &kp F9    &kp F10   &kp DEL
+   &trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans  &trans  &trans    &kp UP    &trans
+   &trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT
+                           &trans  &trans  &trans      &bootloader  &reset  &trans
                         >;
                 };
                 FOUR_layer {
